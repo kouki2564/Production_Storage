@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ab29628a-ae2c-46e7-9008-d304f3ea781f}</ProjectGuid>
+    <RootNamespace>DXActionBattle</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Data\Script\CSVReader.cpp" />
+    <ClCompile Include="Data\Script\Light.cpp" />
+    <ClCompile Include="Data\Script\Manager\DrawingManager.cpp" />
+    <ClCompile Include="Data\Script\Manager\AnimationManager.cpp" />
+    <ClCompile Include="Data\Script\Manager\HandleManager.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\EnemyBase.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\EnemyMagic.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\EnemyStandard.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\EnemyTank.cpp" />
+    <ClCompile Include="Data\Script\Object\Weapon\Axe.cpp" />
+    <ClCompile Include="Data\Script\Object\Weapon\Hand.cpp" />
+    <ClCompile Include="Data\Script\Object\Weapon\Magic.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\Player.cpp" />
+    <ClCompile Include="Data\Script\Object\Weapon\Shot.cpp" />
+    <ClCompile Include="Data\Script\Object\Stage.cpp" />
+    <ClCompile Include="Data\Script\Object\Weapon\Sword.cpp" />
+    <ClCompile Include="Data\Script\Object\Weapon\WeaponBase.cpp" />
+    <ClCompile Include="Data\Script\Parameter.cpp" />
+    <ClCompile Include="Data\Script\PauseMenu.cpp" />
+    <ClCompile Include="Data\Script\Physics\WallCol.cpp" />
+    <ClCompile Include="Data\Script\Physics\CapsuleCol.cpp" />
+    <ClCompile Include="Data\Script\Physics\ChackCollision.cpp" />
+    <ClCompile Include="Data\Script\Physics\Collider.cpp" />
+    <ClCompile Include="Data\Script\Physics\CollisionBase.cpp" />
+    <ClCompile Include="Data\Script\Controller.cpp" />
+    <ClCompile Include="Data\Script\Main.cpp" />
+    <ClCompile Include="Data\Script\Manager\EffectManager.cpp" />
+    <ClCompile Include="Data\Script\Manager\PanelManager.cpp" />
+    <ClCompile Include="Data\Script\Manager\SceneManager.cpp" />
+    <ClCompile Include="Data\Script\Manager\SoundManager.cpp" />
+    <ClCompile Include="Data\Script\Object\Animation.cpp" />
+    <ClCompile Include="Data\Script\Object\Camera.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\CharacterBase.cpp" />
+    <ClCompile Include="Data\Script\Object\ObjectBase.cpp" />
+    <ClCompile Include="Data\Script\Physics\Physics.cpp" />
+    <ClCompile Include="Data\Script\Physics\SphereCol.cpp" />
+    <ClCompile Include="Data\Script\Scene\DebugScene.cpp" />
+    <ClCompile Include="Data\Script\Scene\GameScene.cpp" />
+    <ClCompile Include="Data\Script\Scene\SceneBase.cpp" />
+    <ClCompile Include="Data\Script\Scene\SceneEnd.cpp" />
+    <ClCompile Include="Data\Script\Scene\SceneMain.cpp" />
+    <ClCompile Include="Data\Script\Scene\ScenePause.cpp" />
+    <ClCompile Include="Data\Script\Scene\SceneStart.cpp" />
+    <ClCompile Include="Data\Script\Scene\TitleScene.cpp" />
+    <ClCompile Include="Data\Shader\DamageShader.cpp" />
+    <ClCompile Include="Data\Shader\DeadShader.cpp" />
+    <ClCompile Include="Data\Shader\ShadowMapShader.cpp" />
+    <ClCompile Include="Data\Shader\ToonShader.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\Mutant.cpp" />
+    <ClCompile Include="Data\Script\Scene\SceneStateBase.cpp" />
+    <ClCompile Include="Data\Script\Object\Character\EnemyFly.cpp" />
+    <ClCompile Include="Data\Script\Scene\TutorialScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Data\Script\CSVReader.h" />
+    <ClInclude Include="Data\Script\Light.h" />
+    <ClInclude Include="Data\Script\Manager\DrawingManager.h" />
+    <ClInclude Include="Data\Script\Manager\AnimationManager.h" />
+    <ClInclude Include="Data\Script\Manager\HandleManager.h" />
+    <ClInclude Include="Data\Script\Object\Character\EnemyBase.h" />
+    <ClInclude Include="Data\Script\Object\Character\EnemyMagic.h" />
+    <ClInclude Include="Data\Script\Object\Character\EnemyStandard.h" />
+    <ClInclude Include="Data\Script\Object\Character\EnemyTank.h" />
+    <ClInclude Include="Data\Script\Object\Weapon\Axe.h" />
+    <ClInclude Include="Data\Script\Object\Weapon\Hand.h" />
+    <ClInclude Include="Data\Script\Object\Weapon\Magic.h" />
+    <ClInclude Include="Data\Script\Object\Character\Player.h" />
+    <ClInclude Include="Data\Script\Object\Weapon\Shot.h" />
+    <ClInclude Include="Data\Script\Object\Stage.h" />
+    <ClInclude Include="Data\Script\Object\Weapon\Sword.h" />
+    <ClInclude Include="Data\Script\Object\Weapon\WeaponBase.h" />
+    <ClInclude Include="Data\Script\Parameter.h" />
+    <ClInclude Include="Data\Script\PauseMenu.h" />
+    <ClInclude Include="Data\Script\Physics\WallCol.h" />
+    <ClInclude Include="Data\Script\Physics\CapsuleCol.h" />
+    <ClInclude Include="Data\Script\Physics\ChackCollision.h" />
+    <ClInclude Include="Data\Script\Physics\Collider.h" />
+    <ClInclude Include="Data\Script\Physics\CollisionBase.h" />
+    <ClInclude Include="Data\Script\Controller.h" />
+    <ClInclude Include="Data\Script\Manager\EffectManager.h" />
+    <ClInclude Include="Data\Script\Manager\PanelManager.h" />
+    <ClInclude Include="Data\Script\Manager\SceneManager.h" />
+    <ClInclude Include="Data\Script\Manager\SoundManager.h" />
+    <ClInclude Include="Data\Script\Object\Animation.h" />
+    <ClInclude Include="Data\Script\Object\Camera.h" />
+    <ClInclude Include="Data\Script\Object\Character\CharacterBase.h" />
+    <ClInclude Include="Data\Script\Object\ObjectBase.h" />
+    <ClInclude Include="Data\Script\Physics\Physics.h" />
+    <ClInclude Include="Data\Script\Physics\SphereCol.h" />
+    <ClInclude Include="Data\Script\Quaternion.h" />
+    <ClInclude Include="Data\Script\Scene\DebugScene.h" />
+    <ClInclude Include="Data\Script\Scene\GameScene.h" />
+    <ClInclude Include="Data\Script\Scene\SceneBase.h" />
+    <ClInclude Include="Data\Script\GameData.h" />
+    <ClInclude Include="Data\Script\Scene\SceneEnd.h" />
+    <ClInclude Include="Data\Script\Scene\SceneMain.h" />
+    <ClInclude Include="Data\Script\Scene\ScenePause.h" />
+    <ClInclude Include="Data\Script\Scene\SceneStart.h" />
+    <ClInclude Include="Data\Script\Scene\TitleScene.h" />
+    <ClInclude Include="Data\Script\State\Adjust.h" />
+    <ClInclude Include="Data\Script\State\Attack.h" />
+    <ClInclude Include="Data\Script\State\Death.h" />
+    <ClInclude Include="Data\Script\State\Dodge.h" />
+    <ClInclude Include="Data\Script\State\Jump.h" />
+    <ClInclude Include="Data\Script\State\Knock.h" />
+    <ClInclude Include="Data\Script\State\Move.h" />
+    <ClInclude Include="Data\Script\State\Stan.h" />
+    <ClInclude Include="Data\Script\State\StateBase.h" />
+    <ClInclude Include="Data\Shader\DamageShader.h" />
+    <ClInclude Include="Data\Shader\DataType.h" />
+    <ClInclude Include="Data\Shader\DeadShader.h" />
+    <ClInclude Include="Data\Shader\DxShader_Common_D3D11.h" />
+    <ClInclude Include="Data\Shader\DxShader_DataType_D3D11.h" />
+    <ClInclude Include="Data\Shader\DxShader_PS_D3D11.h" />
+    <ClInclude Include="Data\Shader\DxShader_VS_D3D11.h" />
+    <ClInclude Include="Data\Shader\ShadowMapShader.h" />
+    <ClInclude Include="Data\Shader\ToonShader.h" />
+    <ClInclude Include="Data\Shader\VertexShader.h" />
+    <ClInclude Include="Data\Script\Object\Character\Mutant.h" />
+    <ClInclude Include="Data\Script\Scene\SceneStateBase.h" />
+    <ClInclude Include="Data\Script\Object\Character\EnemyFly.h" />
+    <ClInclude Include="Data\Script\Scene\TutorialScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data\Script\task.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

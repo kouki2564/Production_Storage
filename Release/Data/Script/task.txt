@@ -1,0 +1,69 @@
+[タスクなどのメモ欄]
+
+・ボスステージのジャンプ着地処理
+・剣の長さを伸ばす？
+・剣入れた後のスタン
+・
+
+
+＜次回作以降改善予定＞
+
+・Controller：引数でフレーム指定して一定フレーム置きに入力信号がほしい(主にカーソル操作で使う用)
+			　あとコマンド入力機構もつくっとくか...
+・Physics：問題外、修正の塊　ジャンプ、着地、マップ当たり判定、etc...
+・Object：もう少し形式を確立したい
+・Manager：staticInstanceを使い慣れるところから
+・State：そんなファイルいらなくね？使うときは全部使うしState.hに全てまとめていいんじゃね？
+・Camera：コードみにくい、調整しづらい。State化しろ
+・Scene：State化しろ
+・Light：そもそもまだそんなに力入れてないし、改善しろ
+・Shader：やれ
+・CSV：使え
+・Image：描画機構を統一しろ
+・ライブラリ化：やれ
+・コンポーネント関係諸々：もっと開拓しろ
+
+
+ 
+
+
+ ＜作業中の愚痴＞
+ こころぴょんぴょんしたいんじゃぁ
+
+
+
+
+
+
+
+std::dinamic_pointer_castによるステート
+→重い
+
+①作りたい型のポインタを作成
+std::shared_ptr<PlayerStateIdle> pNext = std::make_shared<PlayerStateIdle>()
+②初期化する
+pnext->Init();
+③代入
+<PlayerStateBase>型の m_nextState = pNext;
+
+
+◎クレジットメモ(忘れそうだから対策)
+
+使用ライブラリ
+->DXライブラリ、effekseer
+
+モデル
+・プレイヤー
+-> Mixamo(モデル,アニメーション) -> blender(調整)
+
+・エネミー
+-> Mixamo(モデル,アニメーション) -> blender(調整)
+
+エフェクト
+
+サウンド
+・BGM
+・SE
+
+フォント
+
