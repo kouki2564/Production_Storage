@@ -747,7 +747,7 @@ void GameScene::TutorialDraw()
 void GameScene::CameraUpdate()
 {
 	// カメラ関係
-	int size = m_objects.size();
+	int size = static_cast<int>(m_objects.size());
 	m_camera.SetTargetPos(m_objects["Player"] ->GetPos(), VZero());
 
 	if (m_nowStageNum[0] == 0 && m_nowStageNum[1] == 1)

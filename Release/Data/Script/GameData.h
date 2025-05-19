@@ -117,18 +117,18 @@ public:
 		if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
 		{
 			m_memoryWorking = pmc.WorkingSetSize / 1024;
-			printf("Working Set Size(RAM使用量) : %d KB\n", m_memoryWorking);
+			printf("Working Set Size(RAM使用量) : %llu KB\n", m_memoryWorking);
 
 			m_lastMemoryWorking = m_memoryWorking - m_lastMemoryWorking;
 
 			/*auto memoryRangeWorking = (pmc.WorkingSetSize / 1024) - m_memoryWorking;
 			if (memoryRangeWorking > 10000)
 			{
-				printf("仮想メモリ増加量  : %d KB\n かなり増加中!!!\n", memoryRangeWorking);
+				printf("仮想メモリ増加量  : %llu KB\n かなり増加中!!!\n", memoryRangeWorking);
 			}*/
 
 			m_memoryUsage = pmc.PagefileUsage / 1024;
-			printf("Pagefile Usage (仮想メモリ使用量) : %d KB\n", m_memoryUsage);
+			printf("Pagefile Usage (仮想メモリ使用量) : %llu KB\n", m_memoryUsage);
 
 			m_lastMemoryUsage = m_memoryUsage - m_lastMemoryUsage;
 
@@ -137,7 +137,7 @@ public:
 			// return m_lastMemoryUsage;
 
 			m_time = GetNowHiPerformanceCount() - m_lastTime;
-			printf("前回計測からの経過時間 : %d ms\n", m_time);
+			printf("前回計測からの経過時間 : %llu ms\n", m_time);
 			m_lastTime = GetNowHiPerformanceCount();
 
 		}

@@ -54,7 +54,7 @@ enum class InputPOV
 	DOWN_LEFT = 5,
 	LEFT = 6,
 	UP_LEFT = 7,
-	NONE = 0xffffffff
+	NONE = 0xffffff
 };
 
 /// <summary>
@@ -165,7 +165,7 @@ private:
 	// 入力用のパッド変数
 	DINPUT_JOYSTATE m_pad;
 
-	Button m_LastButton;
+	Button m_LastButton = Button::NONE;
 
 	// InputPOV m_lastOrder = InputPOV::NONE;
 	// InputPOV m_lastPush = InputPOV::NONE;

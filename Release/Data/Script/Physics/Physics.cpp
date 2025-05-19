@@ -204,7 +204,7 @@ void Physics::SetJumpVec(float height, int time, int maxTime)
 	if (m_isMathJump)
 	{
 		// 2次関数曲線軌道
-		int halfTime = maxTime * 0.5f;
+		int halfTime = static_cast<int>(maxTime * 0.5f);
 		auto slope = -height / (halfTime * halfTime);
 		// ジャンプ軌道のみの仮想座標として落とし込む
 		auto jumpPosY = slope * ((time - halfTime) * (time - halfTime)) + height;

@@ -5,9 +5,9 @@
 struct Sound
 {
 	// サウンドハンドル
-	int handle;
+	int handle = -1;
 	// 音量
-	int vol;
+	int vol = 0;
 };
 
 class SoundManager

@@ -88,6 +88,8 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -108,6 +110,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,6 +128,8 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,13 +150,14 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Data;$(ProjectDir)Data/Script;$(ProjectDir)Data/Script/Manager;$(ProjectDir)Data/Script/Scene;$(ProjectDir)Data/Script/Object;$(ProjectDir)Data/Script/Physics;$(ProjectDir)Data/Shader;$(ProjectDir)Data/Script/State;$(ProjectDir)Data/Hlsl;$(ProjectDir)Data/Effect;$(ProjectDir)Data/Script/Object/Character;$(ProjectDir)Data/Script/Object/Weapon;$(ProjectDir)Data/CSV</AdditionalLibraryDirectories>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Data\Script\CSVReader.cpp" />
     <ClCompile Include="Data\Script\Light.cpp" />
     <ClCompile Include="Data\Script\Manager\DrawingManager.cpp" />
-    <ClCompile Include="Data\Script\Manager\AnimationManager.cpp" />
     <ClCompile Include="Data\Script\Manager\HandleManager.cpp" />
     <ClCompile Include="Data\Script\Object\Character\EnemyBase.cpp" />
     <ClCompile Include="Data\Script\Object\Character\EnemyMagic.cpp" />
@@ -191,10 +198,6 @@
     <ClCompile Include="Data\Script\Scene\ScenePause.cpp" />
     <ClCompile Include="Data\Script\Scene\SceneStart.cpp" />
     <ClCompile Include="Data\Script\Scene\TitleScene.cpp" />
-    <ClCompile Include="Data\Shader\DamageShader.cpp" />
-    <ClCompile Include="Data\Shader\DeadShader.cpp" />
-    <ClCompile Include="Data\Shader\ShadowMapShader.cpp" />
-    <ClCompile Include="Data\Shader\ToonShader.cpp" />
     <ClCompile Include="Data\Script\Object\Character\Mutant.cpp" />
     <ClCompile Include="Data\Script\Scene\SceneStateBase.cpp" />
     <ClCompile Include="Data\Script\Object\Character\EnemyFly.cpp" />
@@ -204,7 +207,6 @@
     <ClInclude Include="Data\Script\CSVReader.h" />
     <ClInclude Include="Data\Script\Light.h" />
     <ClInclude Include="Data\Script\Manager\DrawingManager.h" />
-    <ClInclude Include="Data\Script\Manager\AnimationManager.h" />
     <ClInclude Include="Data\Script\Manager\HandleManager.h" />
     <ClInclude Include="Data\Script\Object\Character\EnemyBase.h" />
     <ClInclude Include="Data\Script\Object\Character\EnemyMagic.h" />
@@ -255,16 +257,6 @@
     <ClInclude Include="Data\Script\State\Move.h" />
     <ClInclude Include="Data\Script\State\Stan.h" />
     <ClInclude Include="Data\Script\State\StateBase.h" />
-    <ClInclude Include="Data\Shader\DamageShader.h" />
-    <ClInclude Include="Data\Shader\DataType.h" />
-    <ClInclude Include="Data\Shader\DeadShader.h" />
-    <ClInclude Include="Data\Shader\DxShader_Common_D3D11.h" />
-    <ClInclude Include="Data\Shader\DxShader_DataType_D3D11.h" />
-    <ClInclude Include="Data\Shader\DxShader_PS_D3D11.h" />
-    <ClInclude Include="Data\Shader\DxShader_VS_D3D11.h" />
-    <ClInclude Include="Data\Shader\ShadowMapShader.h" />
-    <ClInclude Include="Data\Shader\ToonShader.h" />
-    <ClInclude Include="Data\Shader\VertexShader.h" />
     <ClInclude Include="Data\Script\Object\Character\Mutant.h" />
     <ClInclude Include="Data\Script\Scene\SceneStateBase.h" />
     <ClInclude Include="Data\Script\Object\Character\EnemyFly.h" />

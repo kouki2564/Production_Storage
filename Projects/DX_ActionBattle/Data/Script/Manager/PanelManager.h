@@ -26,17 +26,17 @@ struct numData
 	// 描画する桁ごとの数値
 	std::vector<int> number;
 	// 時間ごとに低下するアルファ値
-	int decAlpha;
+	int decAlpha = 0;
 	// 描画する時間
-	int time;
+	int time = 0;
 	// 描画する時間
-	int timeMax;
+	int timeMax = 0;
 	// 描画する座標
-	VECTOR pos;
+	VECTOR pos = VZero();
 	// 時間ごとのスケール拡大値
-	float scale;
+	float scale = 0.0f;
 	// カメラ方向
-	VECTOR cameraDir;
+	VECTOR cameraDir = VZero();
 };
 
 class PanelManager

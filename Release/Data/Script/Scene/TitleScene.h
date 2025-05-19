@@ -6,14 +6,14 @@ class WeaponBase;
 struct bg
 {
     // 座標
-	float posX;
-	float posY;
+	float posX = 0.0f;
+	float posY = 0.0f;
     
 	// 円の半径
-    int range;
+    int range = 0;
 
     // 移動スピード
-    float speed;
+    float speed = 0;
 };
 
 class TitleScene :
@@ -44,10 +44,10 @@ private:
     void BlinkStartString(int value);
 
     // タイトルロゴ
-    int m_titleHandle;
+    int m_titleHandle = -1;
     
     // 点滅フラグ
-    bool m_isBlink;
+    bool m_isBlink = false;
     // スタート押せのアルファ値
     int m_startAlpha = 0;
 
@@ -59,9 +59,9 @@ private:
 	float m_sinMove2 = 0;
 
     // 基準線の色
-    int m_bgColorR;
-    int m_bgColorG;
-	int m_bgColorB;
+    int m_bgColorR = 0;
+    int m_bgColorG = 0;
+	int m_bgColorB = 0;
 
     // 配置するオブジェクト
     std::map<std::string, std::unique_ptr<ObjectBase>> m_objects;
@@ -70,14 +70,13 @@ private:
 
     std::map<std::string, std::unique_ptr<Stage>> m_stage;
 
-    // 武器たちの中心座標
-	VECTOR m_centerPos = VZero();
-	// 武器たちの基準座標
-    VECTOR m_weaponPos[3];
-	// 武器たちの回転角度
-    float m_weaponRot[3] = { 0.0f, 2 / 3 * DX_PI_F, 4 / 3 * DX_PI_F };
+ //   // 武器たちの中心座標
+	//VECTOR m_centerPos = VZero();
+	//// 武器たちの基準座標
+ //   VECTOR m_weaponPos[3];
+	//// 武器たちの回転角度
+ //   float m_weaponRot[3] = { 0.0f, 2 / 3 * DX_PI_F, 4 / 3 * DX_PI_F };
 
     // 武器たちの回転フラグ
 	bool m_isLockPos = false;
 };
-

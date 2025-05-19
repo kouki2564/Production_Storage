@@ -2,7 +2,6 @@
 #include "DxLib.h"
 #include <map>
 #include <string>
-#include "ToonShader.h"
 
 /// <summary>
 /// アニメーションデータ（モデルデータに付随させる）
@@ -217,23 +216,6 @@ private:
 
 	void RateAnimation(std::string& modelName);
 
-	// アニメーション関連変数
-
-	//// アニメーション元のモデルハンドル
-	//int m_modelHandle;
-	//// アニメーション現在フレーム
-	//float m_animaFrame;
-	//// アニメーション遷移rate
-	//float m_animaRate;
-	//// アニメーションインデックス
-	//// 再生中アニメーション
-	//int m_nowAttach;
-	//// 移行先アニメーション
-	//int m_nextAttach;
-	//// アニメーション速度
-	//float m_animaSpeed;
-	
-	ToonShader m_tShader;
 
 	std::map<std::string, ModelData> m_models;
 

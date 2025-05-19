@@ -84,7 +84,7 @@ protected:
 	
 	Camera m_camera;
 
-	bool m_isMoveScene;
+	bool m_isMoveScene = false;
 
 	int m_setEnemyNum = 0;
 

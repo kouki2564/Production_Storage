@@ -283,7 +283,7 @@ void TitleScene::CollisionUpdate()
 void TitleScene::CameraUpdate()
 {
 	// カメラ関係
-	int size = m_objects.size();
+	int size = static_cast<int>(m_objects.size());
 	auto pos = m_objects["Player"]->GetPos();
 	pos.y += 20;
 	m_camera.SetTargetPos(pos, VZero());
@@ -340,14 +340,14 @@ void TitleScene::BackgroundUpdate()
 		// 画面外に出たらｙ座標を一番下の画面外に再配置してｘ座標をランダムに設定
 		if (m_bg[i].posY + m_bg[i].range < 0)
 		{
-			m_bg[i].posY = GameData::kScreenHeight + m_bg[i].range;
-			m_bg[i].posX = GetRand(GameData::kScreenWidth);
+			m_bg[i].posY = static_cast<float>(GameData::kScreenHeight + m_bg[i].range);
+			m_bg[i].posX = static_cast<float>(GetRand(GameData::kScreenWidth));
 		}
 
 		// アルファ値の変化量の設定
 		int alphaMove = 255 / m_bg[i].range;
 		// 座標の上昇によるアルファ値倍率
-		int alphaScale = m_bg[i].posY / GameData::kScreenHeight;
+		int alphaScale = static_cast<int>(m_bg[i].posY / GameData::kScreenHeight);
 
 		// 円を半径の長さ分に分けて描画
 		for (int range = 0; range <= m_bg[i].range; range++)

@@ -1,6 +1,5 @@
 ﻿#include <cassert>
 #include "DrawingManager.h"
-#include "ToonShader.h"
 #include "GameData.h"
 
 void DrawingManager::RegisterModel(std::string name, int handle, VECTOR pos, VECTOR dir, VECTOR scale)
@@ -152,7 +151,7 @@ void DrawingManager::UpdateWeaponModelData(std::string name)
 			// アタッチするモデルをフレームの座標を原点にするための平行移動行列を作成
 			TransMat = MGetTranslate(VScale(AttachSuruFrame1Position, -1.0f));
 
-			auto ownerName = m_models[name].ornerName;
+			std::string ownerName = m_models[name].ornerName;
 
 			// アタッチされるモデルのフレームの行列を取得
 			AttachSareruFrame10Mat = MV1GetFrameLocalWorldMatrix(m_models[ownerName].handle, m_models[name].setFrameNum);

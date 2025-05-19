@@ -15,11 +15,11 @@ public:
 	// キャラクターパラメータ
 	struct Para
 	{
-		int MaxHP;
-		int HP;
-		int Atk;
-		int Def;
-		int Agi;
+		int MaxHP = 0;
+		int HP  = 0;
+		int Atk = 0;
+		int Def = 0;
+		int Agi = 0;
 	};
 
 	// パラメータ登録

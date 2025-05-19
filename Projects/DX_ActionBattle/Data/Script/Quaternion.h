@@ -12,6 +12,7 @@ public:
 		Qu.y = 0;
 		Qu.z = 0;
 		vec = VZero();
+		angle = 0.0f;
 	};
 	virtual ~Quaternion() {}
 

@@ -433,7 +433,7 @@ void Mutant::MoveUpdate()
 			if (moveValue != 0)
 			{
 				// マジックナンバー
-				DrawingManager::Instance().CallAnimation(m_name, "Armature|Walk", 40 / moveValue);
+				DrawingManager::Instance().CallAnimation(m_name, "Armature|Walk", static_cast<int>(40 / moveValue));
 			}
 			else
 			{
@@ -663,11 +663,11 @@ void Mutant::Punch()
 		// 主にアニメーション管理
 		if (m_waitTimer < static_cast<int>(kPunchTime * 0.4f))
 		{
-			DrawingManager::Instance().CallAnimation(m_name, "Armature|LeftPunch", kPunchTime * 0.5f + 10);
+			DrawingManager::Instance().CallAnimation(m_name, "Armature|LeftPunch", static_cast<int>(kPunchTime * 0.5f + 10));
 		}
 		else
 		{
-			DrawingManager::Instance().CallTransAnimation(m_name, "Armature|RightPunch", kPunchTime * 0.5f);
+			DrawingManager::Instance().CallTransAnimation(m_name, "Armature|RightPunch", static_cast<int>(kPunchTime * 0.5f));
 		}
 	}
 }

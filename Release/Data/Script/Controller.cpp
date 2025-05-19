@@ -24,6 +24,7 @@ InputVec Controller::GetStick(Stick stick)
 	else
 	{
 		assert(false);
+		return { 0, 0 };
 	}
 }
 
@@ -151,6 +152,7 @@ bool Controller::GetInputStay(Button button)
 			return false;
 		}
 	}
+	return false;
 }
 
 bool Controller::GetInputDown(Button button)

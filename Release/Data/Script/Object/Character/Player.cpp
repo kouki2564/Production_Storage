@@ -409,7 +409,7 @@ bool Player::GetIsHitAttack(Collider& colOther)
 				/* 与えるダメージの計算処理 */
 
 				// 連撃数をもとに基礎攻撃値を設定
-				float tempPoint = m_parameter.GetPalameter(1);
+				float tempPoint = static_cast<float>(m_parameter.GetPalameter(1));
 				// 武器ごとに攻撃倍率を付与
 				if (m_weapon->kind == Weapon::SWORD)
 				{
@@ -622,7 +622,7 @@ void Player::MoveUpdate()
 		{
 			if (moveValue != 0)
 			{
-				DrawingManager::Instance().CallAnimation(m_name, "Armature|Run", 40 * m_parameter.GetPalameter(3) * 0.1f / moveValue);
+				DrawingManager::Instance().CallAnimation(m_name, "Armature|Run", static_cast<int>(40 * m_parameter.GetPalameter(3) * 0.1f / moveValue));
 			}
 			else
 			{
@@ -664,7 +664,7 @@ void Player::JumpUpdate()
 		{
 			ChangeState(State::JUMP);
 			m_jumpTime = 0;
-			int halfTime = kJumpTime * 0.5f;
+			int halfTime = static_cast<int>(kJumpTime * 0.5f);
 
 			m_jumpPosY = m_pos.y;
 
@@ -884,7 +884,7 @@ void Player::AttackUpdate()
 			}
 
 
-			m_weapon->ColUpdate(2.0f, kSwordWaitTime * 0.5f);
+			m_weapon->ColUpdate(2.0f, static_cast<int>(kSwordWaitTime * 0.5f));
 			if (m_attackCount == 1)
 			{
 				DrawingManager::Instance().CallAnimation(m_name, "Armature|Sword_1", kSwordWaitTime);
@@ -945,7 +945,7 @@ void Player::AttackUpdate()
 				}
 			}
 
-			m_weapon->ColUpdate(2.0f, kAxeWaitTime * 0.5f);
+			m_weapon->ColUpdate(2.0f, static_cast<int>(kAxeWaitTime * 0.5f));
 			// アニメーションの処理
 			if (m_attackCount == 1)
 			{

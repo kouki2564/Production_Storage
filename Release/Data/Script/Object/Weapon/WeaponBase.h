@@ -52,8 +52,8 @@ public:
 	virtual void SetModel(VECTOR pos, VECTOR dir) = 0;
 
 	int handle = -1;
-	VECTOR rot;
-	VECTOR scale;
+	VECTOR rot = VZero();
+	VECTOR scale = VZero();
 
 	// 当たり判定
 	std::vector<Collider> colliders;
@@ -66,11 +66,11 @@ public:
 
 protected:
 	// 当たり判定の拡大先の座標
-	VECTOR m_fixedVec;
+	VECTOR m_fixedVec = VZero();
 	// 当たり判定の拡大値
 	float m_hitScale = 1;
 
-	VECTOR m_targetPos;
+	VECTOR m_targetPos = VZero();
 
 	// 弾クラス
 	std::vector<Shot*> m_shots;

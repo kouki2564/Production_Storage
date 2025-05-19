@@ -25,7 +25,7 @@ public:
     bool isProgress = false;
 
 protected:
-    SceneState m_state;
+    SceneState m_state = SceneState::START;
 
 };
 

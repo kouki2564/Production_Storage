@@ -8,9 +8,9 @@ void ObjectBase::SetUpObject(std::string name, int handle, VECTOR pos, VECTOR di
 
 void ObjectBase::FixPos()
 {
-	int x = m_pos.x * 100;
-	int y = m_pos.y * 100;
-	int z = m_pos.z * 100;
+	int x = static_cast<int>(m_pos.x * 100);
+	int y = static_cast<int>(m_pos.y * 100);
+	int z = static_cast<int>(m_pos.z * 100);
 
 	if ((float)x + 0.5f <= m_pos.x)
 	{

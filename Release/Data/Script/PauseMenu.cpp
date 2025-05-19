@@ -93,9 +93,7 @@ int PauseMenu::GetUpgrade()
 	if (m_isUpgrade)
 	{
 		m_isUpgrade = false;
-
-		// 強化パラメータの選択
-
+		return 0;
 		
 	}
 	else

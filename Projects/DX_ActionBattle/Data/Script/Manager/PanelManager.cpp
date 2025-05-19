@@ -159,7 +159,7 @@ void PanelManager::SetNumber(int number, VECTOR pos, float scale, int drawTime, 
 		initData.number.push_back(number % 10);
 		number /= 10;
 	}
-	initData.decAlpha = 255 / (drawTime * 0.5f);
+	initData.decAlpha = static_cast<int>(255 / (drawTime * 0.5f));
 	initData.time = drawTime;
 	initData.timeMax = drawTime;
 	initData.pos = pos;
@@ -185,7 +185,7 @@ void PanelManager::DrawNumber()
 			else
 			{
 				// ここから
-				int alpha = 255 - num.decAlpha * (num.timeMax * 0.5f - num.time);
+				int alpha = static_cast<int>(255 - num.decAlpha * (num.timeMax * 0.5f - num.time));
 				SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);
 			}
 
